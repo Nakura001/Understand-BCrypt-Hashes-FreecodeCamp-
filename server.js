@@ -20,6 +20,10 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
   console.log(hash + "<==== this is the hash bcrypt");
 });
 
+bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
+  console.log(res, "<=== res here");
+  /*res == true or false*/
+});
 
 //END_ASYNC
 
